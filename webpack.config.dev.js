@@ -45,13 +45,9 @@ module.exports = {
         loader: 'webpack-glsl-loader',
       },
       {
-        test: /\.scss$/,
+        test: /\.(sass|scss)$/,
         // Order of modules matters
-        use: [
-          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpg|png|svg|gif|pdf)$/,
