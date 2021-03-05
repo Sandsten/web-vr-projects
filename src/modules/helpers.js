@@ -15,6 +15,15 @@ function addHelperAxes(node) {
   node.add(axes);
 }
 
+function createCamera(fov) {
+  const aspect = 2;
+  const near = 0.1;
+  const far = 20;
+  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+  return camera;
+}
+
 /**
  * Updates the canvas resolution and aspect ratio based on browser window size
  * @param {Three.js renderer} renderer
@@ -37,4 +46,4 @@ function screenSizeManager(renderer, camera) {
   }
 }
 
-export { makeCubeInstance, addHelperAxes, screenSizeManager };
+export { makeCubeInstance, addHelperAxes, screenSizeManager, createCamera };
