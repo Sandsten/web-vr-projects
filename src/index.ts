@@ -69,7 +69,7 @@ function main() {
   sphereMaterial.map = loader.load('./src/resources/images/station.jpeg');
 
   const sphereMaterialPBR = new THREE.MeshStandardMaterial();
-  sphereMaterialPBR.color.set(0x00ff00);
+  sphereMaterialPBR.color.set(0xff0000);
   sphereMaterialPBR.metalness = 0.1;
   sphereMaterialPBR.roughness = 0.8;
 

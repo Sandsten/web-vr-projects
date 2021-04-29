@@ -11,10 +11,6 @@ COPY ["package.json", "package-lock.json", "./"]
 RUN npm install
 
 # Copy our source code into the container
-COPY ./src ./src
-
-# Webpack config file needed too!
-COPY ./webpack.config.dev.js .
-COPY ./babel.config.json .
+COPY . .
 
 CMD [ "npm", "start" ]
