@@ -16,7 +16,6 @@ function main() {
   const gui = new dat.GUI();
 
   const loader = new THREE.TextureLoader();
-
   // Create a perspective camera and move it back 20 units
   const camera = createCamera(75);
   camera.position.y = 0.5;
@@ -65,11 +64,10 @@ function main() {
   const knot = new THREE.TorusKnotGeometry(0.3, 0.1, 100, 100, 2, 3);
 
   const sphereMaterial = new THREE.MeshBasicMaterial();
-  sphereMaterial.flatShading = false;
   sphereMaterial.map = loader.load('./src/resources/images/station.jpeg');
 
   const sphereMaterialPBR = new THREE.MeshStandardMaterial();
-  sphereMaterialPBR.color.set(0xff0000);
+  sphereMaterialPBR.color.set(0xfff000);
   sphereMaterialPBR.metalness = 0.1;
   sphereMaterialPBR.roughness = 0.8;
 
